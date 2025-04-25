@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Simon Woja</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Bsimtech</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="blog-page">
+        <div class="container">
+            <div class="blog-header">
+                <h1 class="page-title">Tech Blog</h1>
+                <p class="page-subtitle">Thoughts, tutorials, and insights on modern technology</p>
+                
+                <div class="blog-search">
+                    <input type="text" placeholder="Search articles...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="blog-categories">
+                    <a href="#" class="active">All</a>
+                    <a href="#">Web Development</a>
+                    <a href="#">Mobile</a>
+                    <a href="#">Cloud</a>
+                    <a href="#">AI/ML</a>
+                    <a href="#">DevOps</a>
+                </div>
+            </div>
+            
+            <div class="blog-posts">
+                <!-- Featured Post -->
+                <div class="post-card featured">
+                    <div class="post-image">
+                        <img src="images/blog-featured.jpg" alt="Featured Post">
+                        <div class="post-badge">Featured</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">June 12, 2023</span>
+                            <span class="post-category">Web Development</span>
+                            <span class="post-readtime">8 min read</span>
+                        </div>
+                        <h2><a href="blog/post1.html">The Future of React: What's Coming in 2023</a></h2>
+                        <p>Exploring the upcoming features in React 19 including server components, compiler optimizations, and new hooks that will change how we build applications.</p>
+                        <div class="post-footer">
+                            <a href="blog/post1.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <div class="post-tags">
+                                <a href="#">#react</a>
+                                <a href="#">#javascript</a>
+                                <a href="#">#frontend</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Regular Posts -->
+                <div class="posts-grid">
+                    <!-- Post 1 -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/blog-post1.jpg" alt="Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">May 28, 2023</span>
+                                <span class="post-category">Cloud</span>
+                                <span class="post-readtime">5 min read</span>
+                            </div>
+                            <h3><a href="blog/post2.html">Serverless Architecture: Pros, Cons, and When to Use It</a></h3>
+                            <p>An in-depth look at serverless computing, comparing AWS Lambda, Azure Functions, and Google Cloud Functions for different use cases.</p>
+                            <div class="post-footer">
+                                <a href="blog/post2.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 2 -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/blog-post2.jpg" alt="Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">May 15, 2023</span>
+                                <span class="post-category">Mobile</span>
+                                <span class="post-readtime">6 min read</span>
+                            </div>
+                            <h3><a href="blog/post3.html">Flutter vs React Native in 2023: Detailed Comparison</a></h3>
+                            <p>Updated comparison of the two leading cross-platform frameworks with benchmarks, ecosystem analysis, and development experience.</p>
+                            <div class="post-footer">
+                                <a href="blog/post3.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 3 -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/blog-post3.jpg" alt="Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 30, 2023</span>
+                                <span class="post-category">AI/ML</span>
+                                <span class="post-readtime">10 min read</span>
+                            </div>
+                            <h3><a href="blog/post4.html">Practical Machine Learning: Building a Recommendation Engine</a></h3>
+                            <p>Step-by-step guide to building a content-based recommendation system using Python and scikit-learn with real-world data.</p>
+                            <div class="post-footer">
+                                <a href="blog/post4.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 4 -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/blog-post4.jpg" alt="Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 18, 2023</span>
+                                <span class="post-category">DevOps</span>
+                                <span class="post-readtime">7 min read</span>
+                            </div>
+                            <h3><a href="blog/post5.html">Kubernetes for Developers: Essential Concepts Explained</a></h3>
+                            <p>Demystifying Kubernetes architecture, pods, services, and deployments for application developers transitioning to cloud-native.</p>
+                            <div class="post-footer">
+                                <a href="blog/post5.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 5 -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/blog-post5.jpg" alt="Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 5, 2023</span>
+                                <span class="post-category">Web Development</span>
+                                <span class="post-readtime">4 min read</span>
+                            </div>
+                            <h3><a href="blog/post6.html">TypeScript Best Practices for Large Codebases</a></h3>
+                            <p>Lessons learned from maintaining enterprise-scale TypeScript applications: configuration, typing strategies, and tooling.</p>
+                            <div class="post-footer">
+                                <a href="blog/post6.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 6 -->
+                    <div class="post-card">
+                        <div class="post-image">
+                            <img src="images/blog-post6.jpg" alt="Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">March 22, 2023</span>
+                                <span class="post-category">Cloud</span>
+                                <span class="post-readtime">9 min read</span>
+                            </div>
+                            <h3><a href="blog/post7.html">AWS Cost Optimization Strategies for Startups</a></h3>
+                            <p>Practical techniques to reduce your AWS bill by 40-60% without sacrificing performance or reliability.</p>
+                            <div class="post-footer">
+                                <a href="blog/post7.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">Bsimtech</div>
+                    <p>Driving tech innovation with a passion for problem-solving.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dev"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bsimtech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="scripts/blog.js"></script>
+</body>
+</html>
