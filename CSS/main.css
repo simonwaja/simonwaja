@@ -1,6 +1,44 @@
 /* main.css - TechBrand Homepage */
 
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
 
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+        justify-content: flex-start;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
 :root {
     --primary: #3b82f6;
     --primary-dark: #2563eb;
