@@ -40,6 +40,18 @@
     }
 }
 
+.nav-links {
+    transition: transform 0.3s ease;
+}
+
+.nav-links:not(.active) {
+    transform: translateX(-100%);
+}
+
+.nav-links.active {
+    transform: translateX(0);
+}
+
 :root {
     --primary: #3b82f6;
     --primary-dark: #2563eb;
