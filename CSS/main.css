@@ -348,3 +348,10 @@ footer {
 
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
+
+
+@supports not (backdrop-filter: blur(8px)) {
+  header {
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+}
