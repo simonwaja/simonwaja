@@ -57,6 +57,18 @@
     --transition: all 0.3s ease;
 }
 
+
+.nav-links {
+    transition: transform 0.3s ease;
+}
+
+.nav-links:not(.active) {
+    transform: translateX(-100%);
+}
+
+.nav-links.active {
+    transform: translateX(0);
+}
 /* Base Styles */
 .about-page {
     padding: 5rem 0;
