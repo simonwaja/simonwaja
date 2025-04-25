@@ -1,9 +1,141 @@
+/* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.7), url('hero-bg.jpg') center/cover;
-  height: 100vh;
+  padding: 8rem 0 4rem;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-image {
+  flex: 1;
   text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.skill-card {
+  padding: 2rem;
+  text-align: center;
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* ===== PROJECTS SECTION ===== */
+.featured-projects {
+  padding: 5rem 0;
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 2rem;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+/* ===== BLOG SECTION ===== */
+.latest-posts {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.posts-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.post-card {
+  padding: 1.5rem;
+}
+
+.post-date {
+  color: var(--gray);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  padding: 3rem 0;
+  background-color: var(--primary);
   color: white;
+}
+
+.newsletter-content h2 {
+  color: white;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: none;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  order: 2;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
 }
