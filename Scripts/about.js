@@ -26,31 +26,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Filter projects
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            const filterValue = this.getAttribute('data-filter');
-            
-            projectItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        }
     });
-    
+
     // Back to top button
-    const backToTopBtn = document.getElementById('back-to-top');
+    const backToTopBtn = document.querySelector('.back-to-top');
     
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
@@ -66,12 +52,39 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
-});
 
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
-        navLinks.classList.remove('active');
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
+    // Animate timeline items on scroll
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    function checkTimelineItems() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            
+            if (itemTop < triggerBottom) {
+                item.classList.add('show');
+            }
+        });
+    }
+    
+    // Check on initial load
+    checkTimelineItems();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkTimelineItems);
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For demo purposes, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
     }
 });
