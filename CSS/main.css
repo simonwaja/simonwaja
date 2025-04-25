@@ -1,5 +1,89 @@
 /* main.css - TechBrand Homepage */
 
+/* Mobile Navigation */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+        order: 1;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #fff;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .project-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-btn {
+        margin: 5px;
+        padding: 8px 12px;
+    }
+}
+
+/* Accessibility Improvements */
+.mobile-menu:focus {
+    outline: 2px solid #0066cc;
+}
+
+[data-filter]:focus, .project-link:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 :root {
     --primary: #3b82f6;
     --primary-dark: #2563eb;
