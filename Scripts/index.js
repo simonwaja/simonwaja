@@ -95,28 +95,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-// back-to-top.js
+// Back to Top functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const backToTopButton = document.querySelector('.back-to-top');
+    const backToTopBtn = document.querySelector('.back-to-top');
     
-    if (backToTopButton) {
-        // Show/hide button based on scroll position
-        function toggleBackToTop() {
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
+                backToTopBtn.classList.add('visible');
             } else {
-                backToTopButton.classList.remove('visible');
+                backToTopBtn.classList.remove('visible');
             }
-        }
+        });
 
-        // Initial check in case page loads scrolled down
-        toggleBackToTop();
-
-        // Listen for scroll events
-        window.addEventListener('scroll', toggleBackToTop);
-
-        // Smooth scroll to top when clicked
-        backToTopButton.addEventListener('click', function(e) {
+        backToTopBtn.addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({
                 top: 0,
@@ -125,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-    
     
     // Set initial state for animation
     document.querySelectorAll('.skill-card, .project-card, .post-card').forEach(element => {
