@@ -109,41 +109,14 @@ img {
     font-size: 0.9rem;
 }
 
-/* Back to Top Button */
 .back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--box-shadow);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    z-index: 1000;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
+    background: var(--primary-color); /* Use your theme color */
+    /* rest of your existing styles... */
 }
 
 .back-to-top:hover {
-    background: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: var(--secondary-color); /* Use your secondary color */
 }
-
 /* Header */
 header {
     background-color: var(--white);
