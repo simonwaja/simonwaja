@@ -94,6 +94,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+  // Back to top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+    
     
     // Set initial state for animation
     document.querySelectorAll('.skill-card, .project-card, .post-card').forEach(element => {
