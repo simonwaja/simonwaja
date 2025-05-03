@@ -95,25 +95,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-  // Back to top button
-    const backToTopBtn = document.getElementById('back-to-top');
+// back-to-top.js
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.querySelector('.back-to-top');
     
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
+    if (backToTopButton) {
+        // Show/hide button based on scroll position
+        function toggleBackToTop() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
         }
-    });
-    
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
 
+        // Initial check in case page loads scrolled down
+        toggleBackToTop();
+
+        // Listen for scroll events
+        window.addEventListener('scroll', toggleBackToTop);
+
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
     
     
     // Set initial state for animation
